@@ -1,0 +1,250 @@
+Pourquoi ma voiture ne démarre pas ?
+Pourquoi ma voiture fait-elle un bruit étrange en roulant ?
+Pourquoi ma voiture surchauffe-t-elle ?
+Pourquoi le voyant moteur s’allume-t-il sur le tableau de bord ?
+Pourquoi ma voiture tire-t-elle d'un côté en conduisant ?
+Pourquoi ma pédale de frein est-elle molle ?
+Pourquoi ma voiture consomme-t-elle plus de carburant que d'habitude ?
+Pourquoi ma direction est-elle dure ?
+Pourquoi mes phares sont-ils faibles ?
+Pourquoi y a-t-il une odeur de brûlé dans ma voiture ?
+Pourquoi ma voiture vibre-t-elle à haute vitesse ?
+Pourquoi mes freins grincent-ils ?
+Pourquoi ma voiture cale-t-elle souvent ?
+Pourquoi ma voiture perd-elle du liquide de refroidissement ?
+Pourquoi mon alternateur ne charge-t-il pas la batterie ?
+Pourquoi mes essuie-glaces ne fonctionnent-ils pas correctement ?
+Pourquoi mes clignotants clignotent-ils rapidement ?
+Pourquoi ma voiture a-t-elle du mal à passer les vitesses ?
+Pourquoi mon volant tremble-t-il lors du freinage ?
+Pourquoi ma voiture a-t-elle des pertes de puissance en montée ?
+Pourquoi mon moteur fait-il un bruit de cliquetis ?
+Pourquoi y a-t-il de la fumée qui sort de mon échappement ?
+Pourquoi mon régulateur de vitesse ne fonctionne-t-il pas ?
+Pourquoi mon air conditionné ne refroidit-il pas ?
+Pourquoi mon tableau de bord affiche-t-il des avertissements intermittents ?
+Pourquoi ma voiture surchauffe-t-elle fréquemment ?
+Pourquoi ma voiture a-t-elle des problèmes de démarrage le matin ?
+Pourquoi mes pneus s'usent-ils rapidement ?
+Pourquoi ma voiture consomme-t-elle beaucoup d'huile ?
+Pourquoi mon moteur fait-il un bruit de cliquetis sous charge ?
+Pourquoi mon embrayage patine-t-il souvent ?
+Pourquoi ma voiture a-t-elle des problèmes électriques fréquents ?
+Pourquoi mes freins sont-ils moins efficaces ?
+Pourquoi ma voiture a-t-elle des problèmes de suspension ?
+Pourquoi mon véhicule a-t-il des problèmes de carburateur ?
+Pourquoi ma voiture a-t-elle des problèmes de corrosion ?
+Pourquoi mes phares s'éteignent-ils par intermittence ?
+Pourquoi mon moteur émet-il de la fumée noire ?
+Pourquoi ma voiture a-t-elle des problèmes de transmission ?
+Pourquoi mon moteur manque-t-il de puissance ?
+Pourquoi ma voiture a-t-elle du mal à accélérer ?
+Pourquoi ma voiture a-t-elle des problèmes de transmission automatique ?
+Pourquoi mes feux de freinage ne fonctionnent-ils pas ?
+Pourquoi ma voiture a-t-elle des ratés d'allumage ?
+Pourquoi mon moteur s'éteint-il soudainement en conduisant ?
+Pourquoi mon volant vibre-t-il à basse vitesse ?
+Pourquoi ma climatisation souffle-t-elle de l'air chaud ?
+Pourquoi ma voiture consomme-t-elle plus de carburant en ville ?
+Pourquoi mon moteur fait-il un bruit de martèlement ?
+Pourquoi mon moteur émet-il une fumée blanche épaisse ?
+Pourquoi ma voiture a-t-elle une odeur de carburant à l'intérieur ?
+Pourquoi mon moteur tourne-t-il au ralenti de manière irrégulière ?
+Pourquoi mon klaxon ne fonctionne-t-il pas ?
+Pourquoi mon véhicule fait-il des à-coups en conduite ?
+Pourquoi ma voiture a-t-elle des difficultés à monter les côtes ?
+Pourquoi mon véhicule a-t-il des problèmes de direction assistée ?
+Pourquoi ma voiture tremble-t-elle lors de l'accélération ?
+Pourquoi mon moteur émet-il des bruits de souffle ou de sifflement ?
+Pourquoi mon tableau de bord clignote-t-il de manière intermittente ?
+Pourquoi ma voiture a-t-elle des problèmes de système de freinage antiblocage (ABS) ?
+Pourquoi mon moteur ne tourne-t-il pas correctement ?
+Pourquoi mon système d'échappement est-il bruyant ?
+Pourquoi ma voiture a-t-elle une odeur de brûlé après avoir roulé ?
+Pourquoi ma batterie se décharge-t-elle rapidement ?
+Pourquoi ma voiture a-t-elle des problèmes de transmission manuelle ?
+Pourquoi mon moteur fait-il un bruit de sifflement ?
+Pourquoi ma voiture émet-elle une fumée bleue ?
+Pourquoi mes essuie-glaces laissent-ils des traces ?
+Pourquoi mon frein à main ne fonctionne-t-il pas correctement ?
+Pourquoi ma voiture a-t-elle des ratés à l'accélération ?
+Pourquoi mon moteur fait-il un bruit de grognement ?
+Pourquoi ma voiture a-t-elle des problèmes de chauffage ?
+Pourquoi ma voiture a-t-elle une fuite d'huile ?
+Pourquoi mes freins font-ils un bruit de claquement ?
+Pourquoi ma voiture a-t-elle une perte de puissance en montée ?
+Pourquoi mon moteur fait-il un bruit de battement ?
+Pourquoi mon moteur cale-t-il au ralenti ?
+Pourquoi ma voiture a-t-elle des problèmes de démarrage à chaud ?
+Pourquoi mon moteur fait-il un bruit de grattement ?
+Pourquoi ma voiture a-t-elle des problèmes de verrouillage centralisé ?
+Pourquoi ma voiture surchauffe-t-elle ?
+Pourquoi ma direction assistée est-elle dure à manœuvrer ?
+Pourquoi ma voiture émet-elle une odeur d'essence ?
+Pourquoi mon voyant de moteur est-il allumé ?
+Pourquoi ma climatisation ne fonctionne-t-elle pas ?
+Pourquoi ma voiture vibre-t-elle à haute vitesse ?
+Pourquoi ma voiture a-t-elle des problèmes de démarrage à froid ?
+Pourquoi mon volant tremble-t-il en freinant ?
+Pourquoi ma voiture a-t-elle des bruits de claquement au démarrage ?
+Pourquoi ma voiture perd-elle de l'huile ?
+Pourquoi ma voiture fait-elle un bruit métallique en virage ?
+Pourquoi ma voiture a-t-elle des problèmes de régulateur de vitesse ?
+Pourquoi ma voiture a-t-elle des problèmes d'embrayage qui patine ?
+Pourquoi ma voiture fait-elle un bruit de claquement au démarrage ?
+Pourquoi ma voiture a-t-elle des problèmes de démarrage électrique ?
+Pourquoi ma voiture émet-elle des bruits de grognement en tournant le volant ?
+Pourquoi ma voiture a-t-elle des problèmes de démarreur qui tourne mais ne démarre pas ?
+Pourquoi ma voiture a-t-elle des problèmes d'éclairage ?
+Pourquoi ma voiture a-t-elle des problèmes de direction instable ?
+Pourquoi ma voiture a-t-elle des problèmes de dégagement de fumée noire par l'échappement ?
+Pourquoi ma voiture a-t-elle des problèmes de vibration au ralenti ?
+Pourquoi ma voiture a-t-elle des problèmes de démarrage difficile par temps chaud ?
+Pourquoi ma voiture a-t-elle des problèmes de freinage mou ?
+Pourquoi ma voiture a-t-elle des problèmes de démarrage aléatoire ?
+Pourquoi ma voiture a-t-elle des problèmes de clignotants qui ne fonctionnent pas ?
+Pourquoi ma voiture a-t-elle des problèmes de bruit de cliquetis au démarrage ?
+Pourquoi ma voiture a-t-elle des problèmes de voyants qui clignotent ?
+Pourquoi ma voiture a-t-elle des problèmes de surconsommation de carburant ?
+Pourquoi ma voiture a-t-elle des problèmes de bruit de grincement en roulant ?
+Pourquoi ma voiture a-t-elle des problèmes de régime moteur instable ?
+Pourquoi ma voiture a-t-elle des problèmes de démarrage avec une odeur d'essence ?
+Pourquoi ma voiture a-t-elle des problèmes de rétroviseurs électriques qui ne fonctionnent pas ?
+Pourquoi ma voiture a-t-elle des problèmes de ralenti irrégulier ?
+Pourquoi ma voiture a-t-elle des problèmes de système audio qui ne fonctionne pas ?
+Pourquoi ma voiture a-t-elle des problèmes de système de refroidissement qui fuit ?
+Pourquoi ma voiture a-t-elle des problèmes de portières qui grincent ?
+Pourquoi ma voiture a-t-elle des problèmes de surchauffe du convertisseur catalytique ?
+Pourquoi ma voiture a-t-elle des problèmes de voyants de freinage allumés en permanence ?
+Pourquoi ma voiture a-t-elle des problèmes de démarrage avec des claquements métalliques ?
+Pourquoi ma voiture a-t-elle des problèmes de démarrage avec un bruit de cliquetis ?
+Pourquoi ma voiture a-t-elle des problèmes de bruit de claquement sous le capot ?
+Pourquoi ma voiture a-t-elle des problèmes de marche arrière qui saute ?
+Pourquoi ma voiture a-t-elle des problèmes de moteur qui tourne mais n'accélère pas ?
+Pourquoi ma voiture a-t-elle des problèmes de bruit de grincement lors du freinage ?
+Pourquoi ma voiture a-t-elle des problèmes de démarrage avec des secousses ?
+Pourquoi ma voiture a-t-elle des problèmes de perte de liquide de refroidissement ?
+Pourquoi ma voiture a-t-elle des problèmes de bruit de claquement en tournant le volant ?
+Pourquoi ma voiture a-t-elle des problèmes de rétrogradage difficile ?
+Pourquoi ma voiture a-t-elle des problèmes de démarrage avec des bruits de claquement ?
+Pourquoi ma voiture a-t-elle des problèmes de bruit de grincement en suspension ?
+Pourquoi ma voiture a-t-elle des problèmes de perte de puissance à haute vitesse ?
+Pourquoi ma voiture a-t-elle des problèmes de bruit de claquement à froid ?
+Pourquoi ma voiture a-t-elle des problèmes de démarrage avec des odeurs d'essence ?
+Pourquoi ma voiture a-t-elle des problèmes de bruit de frottement en roulant ?
+Pourquoi ma voiture a-t-elle des problèmes de bruit de claquement à l'accélération ?
+Pourquoi ma voiture a-t-elle des problèmes de surchauffe du moteur en ville ?
+Pourquoi ma voiture a-t-elle des problèmes de bruit de cliquetis en accélérant ?
+Pourquoi ma voiture a-t-elle des problèmes de rétroviseurs qui se dérèglent ?
+Pourquoi ma voiture a-t-elle des problèmes de démarrage à chaud intermittent ?
+Pourquoi ma voiture a-t-elle des problèmes de bruit de claquement en roulant sur des routes irrégulières ?
+Pourquoi ma voiture a-t-elle des problèmes de réglage de la portière qui ne reste pas ouverte ?
+Pourquoi ma voiture a-t-elle des problèmes de bruit de claquement en passant sur des bosses ?
+Pourquoi ma voiture a-t-elle des problèmes de grincement lors du freinage en marche arrière ?
+Pourquoi ma voiture a-t-elle des problèmes de vibrations en virage ?
+Pourquoi ma voiture a-t-elle des problèmes de direction qui tire d'un côté ?
+Pourquoi ma voiture a-t-elle des problèmes de bruit de grincement en freinant brusquement ?
+Pourquoi ma voiture a-t-elle des problèmes de bruit de sifflement en accélérant ?
+Pourquoi ma voiture a-t-elle des problèmes de bruit de claquement en changeant de vitesse ?
+Pourquoi ma voiture a-t-elle des problèmes de démarrage avec un bruit de cliquetis au moteur ?
+Pourquoi ma voiture a-t-elle des problèmes de batterie qui se décharge rapidement ?
+Pourquoi ma voiture a-t-elle des problèmes de vibrations à haute vitesse ?
+Pourquoi ma voiture a-t-elle des problèmes de direction assistée qui ne fonctionne pas ?
+Pourquoi ma voiture a-t-elle des problèmes de batterie qui se décharge rapidement ?
+Pourquoi ma voiture a-t-elle des problèmes de boîte de vitesses automatique qui glisse ?
+Pourquoi ma voiture a-t-elle des problèmes de démarrage difficile par temps froid ?
+Pourquoi ma voiture a-t-elle des problèmes de freinage spongieux ?
+7 Pourquoi ma voiture a-t-elle des problèmes de démarrage sans action du démarreur ?
+8 Pourquoi ma voiture a-t-elle des problèmes de fumée bleue à l'échappement ?
+9 Pourquoi ma voiture a-t-elle des problèmes de voyant moteur allumé ?
+10 Pourquoi ma voiture a-t-elle des problèmes de suspension qui grince ?
+11 Pourquoi ma voiture a-t-elle des problèmes de démarrage sans puissance électrique ?
+12 Pourquoi ma voiture a-t-elle des problèmes de climatisation qui ne refroidit pas ?
+13 Pourquoi ma voiture a-t-elle des problèmes de surchauffe du moteur ?
+14 Pourquoi ma voiture a-t-elle des problèmes de voyant d'huile allumé ?
+15 Pourquoi ma voiture a-t-elle des problèmes de bruit de claquement en braquant ?
+16 Pourquoi ma voiture a-t-elle des problèmes de surchauffe du convertisseur catalytique ?
+17 Pourquoi ma voiture a-t-elle des problèmes de démarrage difficile à chaud ?
+18 Pourquoi ma voiture a-t-elle des problèmes de bruit de claquement au démarrage ?
+19 Pourquoi ma voiture a-t-elle des problèmes de direction qui tire d'un côté ?
+20 Pourquoi ma voiture a-t-elle des problèmes de démarrage avec des secousses ?
+21 Pourquoi ma voiture a-t-elle des problèmes de voyant de surchauffe moteur allumé ?
+22 Pourquoi ma voiture a-t-elle des problèmes de bruit de grincement en roulant ?
+23 Pourquoi ma voiture a-t-elle des problèmes de batterie qui se décharge rapidement ?
+24 Pourquoi ma voiture a-t-elle des problèmes de bruit de cliquetis au freinage ?
+25 Pourquoi ma voiture a-t-elle des problèmes de démarrage sans action du démarreur ?
+26 Pourquoi ma voiture a-t-elle des problèmes de bruit de claquement en tournant le volant ?
+27 Pourquoi ma voiture a-t-elle des problèmes de démarrage avec des bruits de claquement ?
+28 Pourquoi ma voiture a-t-elle des problèmes de surconsommation de carburant ?
+29 Pourquoi ma voiture a-t-elle des problèmes de démarrage avec une odeur d'essence ?
+30 Pourquoi ma voiture a-t-elle des problèmes de bruit de grincement lors du freinage ?
+31 Pourquoi ma voiture a-t-elle des problèmes de démarrage lent par temps froid ?
+32 Pourquoi ma voiture a-t-elle des problèmes de bruit de claquement sous le capot ?
+33 Pourquoi ma voiture a-t-elle des problèmes de voyant ABS allumé ?
+34 Pourquoi ma voiture a-t-elle des problèmes de bruit de grognement en virage ?
+35 Pourquoi ma voiture a-t-elle des problèmes de démarrage sans aucune réaction du moteur ?
+36 Pourquoi ma voiture a-t-elle des problèmes de volant qui vibre à haute vitesse ?
+37 Pourquoi ma voiture a-t-elle des problèmes de démarrage avec des claquements dans le moteur ?
+38 Pourquoi ma voiture a-t-elle des problèmes de bruit de grognement en roulant ?
+39 Pourquoi ma voiture a-t-elle des problèmes de voyant de pression d'huile allumé ?
+40 Pourquoi ma voiture a-t-elle des problèmes de bruit de claquement en accélérant ?
+41 Pourquoi ma voiture a-t-elle des problèmes de voyant de batterie allumé ?
+42 Pourquoi ma voiture a-t-elle des problèmes de bruit de grincement en braquant à basse vitesse ?
+43 Pourquoi ma voiture a-t-elle des problèmes de fuite d'huile sous le moteur ?
+44 Pourquoi ma voiture a-t-elle des problèmes de démarrage avec un cliquetis dans le moteur ?
+45 Pourquoi ma voiture a-t-elle des problèmes de freinage qui tirent d'un côté ?
+46 Pourquoi ma voiture a-t-elle des problèmes de démarrage avec des ratés intermittents ?
+47 Pourquoi ma voiture a-t-elle des problèmes de bruit de claquement en roulant sur des routes accidentées ?
+48 Pourquoi ma voiture a-t-elle des problèmes de voyant de contrôle du moteur clignotant ?
+49 Pourquoi ma voiture a-t-elle des problèmes de bruit de grincement en freinant ?
+50 Pourquoi ma voiture a-t-elle des problèmes de bruit de sifflement en accélérant ?
+51 Pourquoi ma voiture a-t-elle des problèmes de démarrage avec des secousses ?
+52 Pourquoi ma voiture a-t-elle des problèmes de direction qui tire d'un côté ?
+53 Pourquoi ma voiture a-t-elle des problèmes de démarrage avec des claquements dans le moteur ?
+54 Pourquoi ma voiture a-t-elle des problèmes de surchauffe du moteur ?
+55 Pourquoi ma voiture a-t-elle des problèmes de bruit de claquement en braquant ?
+56 Pourquoi ma voiture a-t-elle des problèmes de freinage spongieux ?
+57 Pourquoi ma voiture a-t-elle des problèmes de démarrage sans action du démarreur ?
+58 Pourquoi ma voiture a-t-elle des problèmes de fumée bleue à l'échappement ?
+59 Pourquoi ma voiture a-t-elle des problèmes de voyant moteur allumé ?
+60 Pourquoi ma voiture a-t-elle des problèmes de suspension qui grince ?
+61 Pourquoi ma voiture a-t-elle des problèmes de démarrage sans puissance électrique ?
+62 Pourquoi ma voiture a-t-elle des problèmes de climatisation qui ne refroidit pas ?
+63 Pourquoi ma voiture a-t-elle des problèmes de surchauffe du moteur ?
+64 Pourquoi ma voiture a-t-elle des problèmes de voyant d'huile allumé ?
+65 Pourquoi ma voiture a-t-elle des problèmes de bruit de claquement en braquant ?
+66 Pourquoi ma voiture a-t-elle des problèmes de démarrage avec un bruit de cliquetis au moteur ?
+67 Pourquoi ma voiture a-t-elle des problèmes de batterie qui se décharge rapidement ?
+68 Pourquoi ma voiture a-t-elle des problèmes de démarrage difficile par temps froid ?
+69 Pourquoi ma voiture a-t-elle des problèmes de bruit de claquement sous le capot ?
+70 Pourquoi ma voiture a-t-elle des problèmes de voyant ABS allumé ?
+71 Pourquoi ma voiture a-t-elle des problèmes de bruit de grognement en virage ?
+72 Pourquoi ma voiture a-t-elle des problèmes de démarrage sans aucune réaction du moteur ?
+73 Pourquoi ma voiture a-t-elle des problèmes de volant qui vibre à haute vitesse ?
+74 Pourquoi ma voiture a-t-elle des problèmes de démarrage avec des claquements dans le moteur ?
+75 Pourquoi ma voiture a-t-elle des problèmes de surchauffe du moteur ?
+76 Pourquoi ma voiture a-t-elle des problèmes de bruit de claquement en braquant ?
+77 Pourquoi ma voiture a-t-elle des problèmes de freinage spongieux ?
+78 Pourquoi ma voiture a-t-elle des problèmes de démarrage sans action du démarreur ?
+79 Pourquoi ma voiture a-t-elle des problèmes de fumée bleue à l'échappement ?
+80 Pourquoi ma voiture a-t-elle des problèmes de voyant moteur allumé ?
+81 Pourquoi ma voiture a-t-elle des problèmes de suspension qui grince ?
+82 Pourquoi ma voiture a-t-elle des problèmes de démarrage sans puissance électrique ?
+83 Pourquoi ma voiture a-t-elle des problèmes de climatisation qui ne refroidit pas ?
+84 Pourquoi ma voiture a-t-elle des problèmes de bruit de claquement sous le capot ?
+85 Pourquoi ma voiture a-t-elle des problèmes de voyant ABS allumé ?
+86 Pourquoi ma voiture a-t-elle des problèmes de bruit de grognement en virage ?
+87 Pourquoi ma voiture a-t-elle des problèmes de démarrage sans aucune réaction du moteur ?
+88 Pourquoi ma voiture a-t-elle des problèmes de volant qui vibre à haute vitesse ?
+89 Pourquoi ma voiture a-t-elle des problèmes de démarrage avec des claquements dans le moteur ?
+90 Pourquoi ma voiture a-t-elle des problèmes de surchauffe du moteur ?
+91 Pourquoi ma voiture a-t-elle des problèmes de bruit de claquement en braquant ?
+92 Pourquoi ma voiture a-t-elle des problèmes de freinage spongieux ?
+93 Pourquoi ma voiture a-t-elle des problèmes de démarrage sans action du démarreur ?
+94 Pourquoi ma voiture a-t-elle des problèmes de fumée bleue à l'échappement ?
+Pourquoi ma voiture a-t-elle des problèmes de voyant moteur allumé ?
+Pourquoi ma voiture a-t-elle des problèmes de suspension qui grince ?
+Pourquoi ma voiture a-t-elle des problèmes de démarrage sans puissance électrique ?
+Pourquoi ma voiture a-t-elle des problèmes de climatisation qui ne refroidit pas ?
+Pourquoi ma voiture a-t-elle des problèmes de bruit de claquement sous le capot ?
+Pourquoi ma voiture a-t-elle des problèmes de voyant ABS allumé ? 
