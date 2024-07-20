@@ -34,28 +34,17 @@ class verifytoken(forms.Form):
     
 
 class InitUser(forms.Form):
-    id = forms.CharField(required=True)
+    id = forms.CharField(required=False)
     nom = forms.CharField(required=True)
     prenom = forms.CharField(required=True)
     email = forms.CharField(required=True)
+    telephone = forms.CharField(required=True)
     password = forms.CharField(required=True)
     photo = forms.CharField(required=True)
     sexe = forms.CharField(required=True)
     date_naissance = forms.IntegerField(required=True)
-    type = forms.CharField(required=True)
-    cni = forms.CharField(required=True)
-    telephone = forms.CharField(required=True)
-    parti = forms.CharField(required=True)                                                              
-    matricule = forms.CharField(required=True)
-    parrain = forms.CharField(required=True)
-    commune = forms.CharField(required=True)
-    departement_org = forms.CharField(required=True)
-    departement = forms.CharField(required=True)
-    region = forms.CharField(required=True)
+    ville = forms.CharField(required=True)
     pays = forms.CharField(required=True)
-    preinscrit= forms.BooleanField(required=False)
-    inscrit= forms.BooleanField(required=False)
-    sympathisant = forms.CharField(required=True)
 
     def __init__(self, *args, **kwargs):
         super(InitUser, self).__init__(*args, **kwargs)
@@ -96,6 +85,7 @@ class setUserphoto(forms.Form):
 class getGaragesAround(forms.Form):
     latitude = forms.FloatField(required=True)
     longitude = forms.FloatField(required=True)
+    key = forms.CharField(required=False)
 
     def __init__(self, *args, **kwargs):
         super(getGaragesAround, self).__init__(*args, **kwargs)

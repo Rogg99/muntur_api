@@ -109,7 +109,7 @@ class Discussion(models.Model):
         ordering =["creation_date"]
 
     def __str__(self):
-        return 'Discussion : '+ self.initiateur +' >> '+ self.interlocuteur
+        return 'Discussion : '+ str(self.initiateur) +' >> '+ str(self.interlocuteur)
 
 class Message(models.Model):
     id = models.CharField(primary_key=True,unique=True,max_length=100)
@@ -126,4 +126,4 @@ class Message(models.Model):
         ordering =["creation_date"]
 
     def __str__(self):
-        return self.emetteur +' : '+ self.contenu
+        return str(self.emetteur) +' : '+ self.contenu

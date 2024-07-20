@@ -176,7 +176,7 @@ def verifyToken(request):
             ip = x_forwarded_for.split(',')[0]
         else:
             ip = request.META.get('REMOTE_ADDR')
-        form = forms.verifytoken(payload)
+        form = forms.verifyTokenIn(payload)
         if form.is_valid() :
             access = form.cleaned_data["access"]
             usr = Token.objects.filter(access=access)
@@ -231,7 +231,7 @@ def signOut(request):
             ip = x_forwarded_for.split(',')[0]
         else:
             ip = request.META.get('REMOTE_ADDR')
-        form = forms.verifytoken(payload)
+        form = forms.verifyTokenIn(payload)
         if form.is_valid() :
             access = form.cleaned_data["access"]
             usr = Token.objects.filter(access=access)
@@ -293,7 +293,7 @@ def setPassword(request):
     if request.method == 'GET':
         payload = json.dumps(request.GET.dict())
         payload = json.loads(payload)
-        form = forms.verifytoken(payload)
+        form = forms.verifyTokenIn(payload)
         if form.is_valid() :
             email = form.cleaned_data["email"]
             newpassword = form.cleaned_data["newpassword"]
@@ -374,6 +374,8 @@ def createUser(request):
                 photo = form.cleaned_data["photo"]
                 sexe = form.cleaned_data["sexe"]
                 telephone = form.cleaned_data["telephone"]
+                ville = form.cleaned_data["ville"]
+                pays = form.cleaned_data["pays"]
                 try:
                     token = Token()
                     token.id=email
@@ -394,8 +396,7 @@ def createUser(request):
                     session.save()
                     
                     usr = User()
-                    usr.id=id
-                    print(floor(datetime.datetime.now().timestamp()))
+                    # print(floor(datetime.datetime.now().timestamp()))
                     codefin = datetime.datetime.now().timestamp()
                     usr.id = str(uuid.uuid4()) + ":"+str(len(User.objects.filter(creation_date=codefin)))
                     usr.nom = nom
@@ -404,6 +405,8 @@ def createUser(request):
                     usr.photo = photo
                     usr.sexe = sexe
                     usr.telephone = telephone
+                    usr.ville = ville
+                    usr.pays = pays
                     usr.save() 
                     data["error"] = False
                     data["code"] = 0
@@ -414,7 +417,6 @@ def createUser(request):
                                 "email" : usr.email,
                                 "photo" : usr.photo,
                                 "sexe" : usr.sexe,
-                                "cni" : usr.cni,
                                 "telephone" : usr.telephone,
                                 }
                     status = 200
@@ -526,7 +528,7 @@ def getUser(request):
         payload = json.loads(payload)
         print(payload)
         form = forms.getObject(payload)
-        if verifyToken(token=token) and form.is_valid() :
+        if verifyTokenIn(token=token,request=request) and form.is_valid() :
             id = form.cleaned_data["id"]
             usr = User.objects.get(id=id)
             data["error"] = False
@@ -579,7 +581,7 @@ def getUserWithEmailandPwd(request):
         payload = json.loads(payload)
         print(payload)
         form = forms.getUserwithemail(payload)
-        if verifyToken(token=token) and form.is_valid() :
+        if verifyTokenIn(token=token,request=request) and form.is_valid() :
             email = form.cleaned_data["email"]
             try:
                 usr = User.objects.get(email=email)
@@ -641,7 +643,7 @@ def deleteUser(request):
         payload = json.loads(payload)
         print(payload)
         form = forms.getUser(payload)
-        if verifyToken(token=token) and form.is_valid() :
+        if verifyTokenIn(token=token,request=request) and form.is_valid() :
             User.objects.delete(id=id)
             data["error"] = False
             data["code"] = 0
@@ -703,7 +705,7 @@ def createGarage(request):
         payload = json.loads(payload)
         request_file = request.FILES['image'] if 'image' in request.FILES else None
         form = forms.InitGarage(payload)
-        if verifyToken(token=token) and form.is_valid() and request_file:
+        if verifyTokenIn(token=token,request=request) and form.is_valid() and request_file:
             fs = FileSystemStorage()
             size = 300, 170
             filename = form.cleaned_data["photo"]
@@ -816,7 +818,7 @@ def updateGarage(request):
         payload = json.loads(request.body)
         form = forms.InitGarage(payload)
         #print(token)
-        if verifyToken(token=token) and form.is_valid():
+        if verifyTokenIn(token=token,request=request) and form.is_valid():
             id = form.cleaned_data["id"]
             nom = form.cleaned_data["nom"]
             prenom = form.cleaned_data["prenom"]
@@ -908,7 +910,7 @@ def getGarage(request):
         payload = json.loads(payload)
         print(payload)
         form = forms.getObject(payload)
-        if verifyToken(token=token) and form.is_valid() :
+        if verifyTokenIn(token=token,request=request) and form.is_valid() :
             usr = Garage.objects.get(id=id)
             data["error"] = False
             data["code"] = 0
@@ -956,7 +958,7 @@ def getGarages(request):
     status = 400
     if request.method == 'GET':
         token=request.META['HTTP_AUTHORIZATION']
-        if verifyToken(token=token) :
+        if verifyTokenIn(token=token,request=request) :
             pres = Garage.objects.all()
             res = []
             for usr in pres:
@@ -1005,9 +1007,11 @@ def getGaragesAround(request):
         token=request.META['HTTP_AUTHORIZATION']  
         payload = json.loads(request.body)
         form = forms.getGaragesAround(payload)
-        if verifyToken(token=token) and form.is_valid() :
+        if verifyTokenIn(token=token,request=request) and form.is_valid() :
             longitude = form.cleaned_data["longitude"]
             latitude = form.cleaned_data["latitude"]
+            key = form.cleaned_data["key"]
+
             pres = Garage.objects.all()
             result=[]
             userPosition = Point()
@@ -1019,29 +1023,27 @@ def getGaragesAround(request):
                 garagePosition.lat=garage.latitude
                 garagePosition.lon=garage.longitude
                 
-                if(calculateDistance(userPosition,garagePosition)<10000):
-                    result.append(garage) 
+                result.append({
+                                "id":garage.id,
+                                "nom" : garage.nom,
+                                "email" : garage.email,
+                                "telephone1" : garage.telephone1,
+                                "telephone2" : garage.telephone2,
+                                "photo" : garage.photo,
+                                "ville" : garage.ville,
+                                "description" : garage.description,
+                                "pays" : garage.pays,
+                                "longitude" : garage.longitude,
+                                "distance" : calculateDistance(userPosition,garagePosition),
+                                "latitude" : garage.latitude,
+                                "type" : garage.type,
+                                "creation_date" : garage.creation_date,
+                                }) 
+            result = sorted(result, key=lambda x: x['distance'])
 
-            res = []
-            for usr in result:
-                if usr.id!="":
-                    res.append({
-                        "id":usr.id,
-                        "nom" : usr.nom,
-                        "email" : usr.email,
-                        "telephone1" : usr.telephone1,
-                        "telephone2" : usr.telephone2,
-                        "photo" : usr.photo,
-                        "ville" : usr.ville,
-                        "pays" : usr.pays,
-                        "longitude" : usr.longitude,
-                        "latitude" : usr.latitude,
-                        "type" : usr.type,
-                        "creation_date" : usr.creation_date,
-                    })
             data["error"] = False
             data["code"] = 0
-            data["data"] = res
+            data["data"] = result
             status = 200
         elif not form.is_valid():
                 status = 400
@@ -1076,7 +1078,7 @@ def deleteGarage(request):
         payload = json.loads(payload)
         print(payload)
         form = forms.getInscription(payload)
-        if verifyToken(token=token) and form.is_valid() :
+        if verifyTokenIn(token=token,request=request) and form.is_valid() :
             Inscription.objects.delete(id=id)
             data["error"] = False
             data["code"] = 0
@@ -1119,7 +1121,7 @@ def createDiscussion(request):
         payload = json.loads(request.body)
         form = forms.InitDiscussion(payload)
         #print(token)
-        if verifyToken(token=token) and form.is_valid():
+        if verifyTokenIn(token=token,request=request) and form.is_valid():
             id = form.cleaned_data["id"]
             initiateur = form.cleaned_data["initiateur"]
             interlocuteur = form.cleaned_data["interlocuteur"]
@@ -1190,7 +1192,7 @@ def updateDiscussion(request):
         payload = json.loads(request.body)
         form = forms.InitDiscussion(payload)
         #print(token)
-        if verifyToken(token=token) and form.is_valid():
+        if verifyTokenIn(token=token,request=request) and form.is_valid():
             id = form.cleaned_data["id"]
             last_message = form.cleaned_data["last_message"]
             last_date = form.cleaned_data["last_date"]
@@ -1252,7 +1254,7 @@ def getDiscussion(request):
         payload = json.loads(payload)
         print(payload)
         form = forms.getObject(payload)
-        if verifyToken(token=token) and form.is_valid() :
+        if verifyTokenIn(token=token,request=request) and form.is_valid() :
             usr = Discussion.objects.get(id=id)
             data["error"] = False
             data["code"] = 0
@@ -1295,7 +1297,7 @@ def getDiscussions(request):
     status = 400
     if request.method == 'GET':
         token=request.META['HTTP_AUTHORIZATION']
-        if verifyToken(token=token):
+        if verifyTokenIn(token=token,request=request):
             pres = Discussion.objects.all()
             res = []
             for usr in pres:
@@ -1340,7 +1342,7 @@ def deleteDiscussion(request):
         payload = json.loads(payload)
         print(payload)
         form = forms.getObject(payload)
-        if verifyToken(token=token) and form.is_valid() :
+        if verifyTokenIn(token=token,request=request) and form.is_valid() :
             id = form.cleaned_data["id"]
             Discussion.objects.delete(id=id)
             data["error"] = False
@@ -1383,7 +1385,7 @@ def createMessage(request):
         payload = json.loads(request.body)
         
         form = forms.InitMessage(payload)
-        if verifyToken(token=token) and form.is_valid():
+        if verifyTokenIn(token=token,request=request) and form.is_valid():
             discussion = form.cleaned_data["discussion"]
             emetteur = form.cleaned_data["emetteur"]
             media = form.cleaned_data["media"]
@@ -1465,7 +1467,7 @@ def getMessage(request):
         payload = json.loads(payload)
         print(payload)
         form = forms.getObject(payload)
-        if verifyToken(token=token) and form.is_valid() :
+        if verifyTokenIn(token=token,request=request) and form.is_valid() :
             id=form.cleaned_data['id']
             user_id=form.cleaned_data['user_id']
             usr = Message.objects.get(id=id)
@@ -1511,7 +1513,7 @@ def getMessages(request):
     status = 400
     if request.method == 'GET':
         token=request.META['HTTP_AUTHORIZATION']
-        if verifyToken(token=token):
+        if verifyTokenIn(token=token,request=request):
             pres = Message.objects.all()
             res = []
             for usr in pres:
@@ -1563,7 +1565,7 @@ def deleteMessage(request):
         payload = json.loads(payload)
         print(payload)
         form = forms.getObject(payload)
-        if verifyToken(token=token) and form.is_valid() :
+        if verifyTokenIn(token=token,request=request) and form.is_valid() :
             Message.objects.delete(id=id)
             data["error"] = False
             data["code"] = 0
@@ -1603,7 +1605,7 @@ def getMessagesFromDisc(request):
         payload = json.loads(payload)
         print(payload)
         form = forms.getMessage(payload)
-        if verifyToken(token=token) and form.is_valid() :
+        if verifyTokenIn(token=token,request=request) and form.is_valid() :
             disc_id=form.cleaned_data['id']
             time=form.cleaned_data['time']
             if not time:
@@ -1659,7 +1661,7 @@ def getDiscusionsFromUser(request):
         payload = json.loads(payload)
         #print(payload)
         form = forms.getObject(payload)
-        if verifyToken(token=token) and form.is_valid() :
+        if verifyTokenIn(token=token,request=request) and form.is_valid() :
             user_id=form.cleaned_data['id']
             user=User.objects.filter(id=user_id)
             if len(user)>0:
@@ -1806,6 +1808,7 @@ from nltk.corpus import movie_reviews
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import string
+from django.conf import settings
 
 def preprocess_text(text):
     # Tokenize the text into individual words
@@ -1822,10 +1825,10 @@ def generate_response_car_preloaded(user_input):
     from sklearn.feature_extraction.text import CountVectorizer
     import pickle
     # Preprocess and tokenize the user inputimport pickle
-    f = open('models/car_classifier.pickle', 'rb')
+    f = open(settings.MEDIA_ROOT+'/models/car_classifier.pickle', 'rb')
     classifier = pickle.load(f)
     f.close()
-    f = open('models/car_vectorizer.pickle', 'rb')
+    f = open(settings.MEDIA_ROOT+'/models/car_vectorizer.pickle', 'rb')
     vectorizer = pickle.load(f)
     f.close()
     preprocessed_input = preprocess_text(user_input)
@@ -1847,7 +1850,7 @@ def askQuestion(request):
         payload = json.loads(request.body)
         
         form = forms.InitMessage(payload)
-        if verifyToken(token=token) and form.is_valid():
+        if verifyTokenIn(token=token,request=request) and form.is_valid():
             discussion = form.cleaned_data["discussion"]
             emetteur = form.cleaned_data["emetteur"]
             media = form.cleaned_data["media"]
@@ -1858,7 +1861,19 @@ def askQuestion(request):
                 codefin = floor(datetime.datetime.now().timestamp())
                 usr.id = str(uuid.uuid4()) + ":" + str(codefin)
                 
-                disc = Discussion.objects.get(id=discussion)
+                discs = Discussion.objects.filter(id=discussion)
+                if(len(discs)==0):
+                    disc=Discussion()
+                    disc.id=discussion
+                    disc.initiateur = User.objects.get(id=emetteur)
+                    disc.interlocuteur = User.objects.get(id='1')
+                    disc.last_message = contenu
+                    disc.last_writer = emetteur
+                    disc.last_date = date_envoi
+                    disc.save()
+                    
+                else:
+                    disc=discs[0]
 
                 usr.media = media
                 usr.contenu = contenu
@@ -1877,7 +1892,7 @@ def askQuestion(request):
                 AiResponse.save()
 
                 disc.last_message = AiResponse.contenu
-                disc.last_writer = AiResponse.emetteur
+                disc.last_writer = AiResponse.emetteur.id
                 disc.last_date = date_envoi
                 disc.save()
 
@@ -1886,7 +1901,7 @@ def askQuestion(request):
                 data["data"] = {
                             "id":AiResponse.id,
                             "disc_id" : AiResponse.discussion.id,
-                            "emetteur" : AiResponse.emetteur,
+                            "emetteur" : AiResponse.emetteur.id,
                             "contenu" : AiResponse.contenu,
                             "media" : AiResponse.media,
                             "date_envoi" : AiResponse.date_envoi,
