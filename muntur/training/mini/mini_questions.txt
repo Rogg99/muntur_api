@@ -160,3 +160,153 @@ Hello
 good morning
 goodnight
 good afternoon
+Why won't my car start?
+Why does my car make a strange noise while driving?
+Why is my car overheating?
+Why does the check engine light come on on the dashboard?
+Why does my car pull to one side while driving?
+Why is my brake pedal soft?
+Why is my car using more fuel than usual?
+Why is my leadership harsh?
+Why are my headlights dim?
+Why does my car smell burning?
+Why does my car vibrate at high speed?
+Why are my brakes squealing?
+Why does my car stall often?
+Why is my car losing coolant?
+Why is my alternator not charging the battery?
+Why are my windshield wipers not working properly?
+Why are my turn signals flashing quickly?
+Why is my car having trouble shifting?
+Why does my steering wheel shake when braking?
+Why does my car lose power when going uphill?
+Why is my engine making a clicking noise?
+Why is there smoke coming out of my exhaust?
+Why is my cruise control not working?
+Why is my air conditioning not cooling?
+Why is my dashboard showing intermittent warnings?
+Why does my car frequently overheat?
+Why does my car have starting problems in the morning?
+Why do my tires wear out quickly?
+Why does my car use a lot of oil?
+Why is my engine making a clicking noise under load?
+Why does my clutch slip often?
+Why does my car have frequent electrical problems?
+Why are my brakes less effective?
+Why is my car having suspension problems?
+Why is my vehicle having carburetor problems?
+Why does my car have corrosion problems?
+Why do my headlights turn off intermittently?
+Why is my engine emitting black smoke?
+Why is my car having transmission problems?
+Why is my engine lacking power?
+Why is my car having trouble accelerating?
+Why is my car having automatic transmission problems?
+Why are my brake lights not working?
+Why does my car misfire?
+Why does my engine suddenly shut off while driving?
+Why does my steering wheel vibrate at low speed?
+Why is my air conditioning blowing hot air?
+Why does my car use more fuel in the city?
+Why is my engine making a hammering noise?
+Why is my engine emitting thick white smoke?
+Why does my car smell like fuel inside?
+Why is my engine idling erratically?
+Why is my horn not working?
+Why does my vehicle jerk when driving?
+Why does my car have difficulty going up hills?
+Why is my vehicle having power steering problems?
+Why does my car shake when accelerating?
+Why is my engine making blowing or whistling noises?
+Why is my dashboard flashing intermittently?
+Why does my car have anti-lock brake system (ABS) problems?
+Why is my engine not running properly?
+Why is my exhaust system noisy?
+Why does my car smell burning after driving?
+Why is my battery draining quickly?
+Why is my car having manual transmission problems?
+Why is my engine making a whistling noise?
+Why is my car giving off blue smoke?
+Why do my windshield wipers leave streaks?
+Why is my handbrake not working properly?
+Why does my car misfire when accelerating?
+Why is my engine making a growling noise?
+Why is my car having heating problems?
+Why is my car leaking oil?
+Why are my brakes making a clicking noise?
+Why does my car lose power when going uphill?
+Why is my engine making a thumping noise?
+Why does my engine stall at idle?
+Why is my car having hot start problems?
+Why is my engine making a scratching noise?
+Why does my car have central locking problems?
+Why is my car overheating?
+Why is my power steering hard to operate?
+Why does my car smell like gasoline?
+Why is my check engine light on?
+Why is my air conditioning not working?
+Why does my car vibrate at high speed?
+Why does my car have cold starting problems?
+Why does my steering wheel shake when braking?
+Why does my car make clicking noises when starting?
+Why is my car losing oil?
+Why does my car make a metallic noise when turning?
+Why is my car having cruise control problems?
+Why is my car having clutch slipping problems?
+does my car make a clicking noise when starting?
+Why is my car having electric starting problems?
+Why does my car make growling noises when turning the steering wheel?
+Why is my car having problems with the starter turning but not starting?
+Why is my car having lighting problems?
+Why is my car having unstable steering issues?
+Why is my car having problems with black smoke coming from the exhaust?
+Why is my car having vibration problems at idle?
+Why does my car have hard starting problems in hot weather?
+Why is my car having soft braking issues?
+Why is my car having random starting problems?
+Why is my car having problems with turn signals not working?
+Why does my car have knocking noise problems when starting?
+Why is my car having flashing light issues?
+Why does my car have fuel consumption problems?
+Why does my car have problems with grinding noise while driving?
+Why does my car have unstable engine speed problems?
+Why is my car having trouble starting with a gasoline smell?
+Why is my car having problems with power mirrors not working?
+Why is my car having rough idling problems?
+Why is my car having audio system not working issues?
+Why does my car have leaking cooling system problems?
+Why does my car have squeaky door problems?
+Why is my car having catalytic converter overheating problems?
+Why does my car have problems with brake lights on all the time?
+Why is my car having starting problems with metallic clicking noises?
+Why is my car having trouble starting with a clicking noise?
+Why does my car have problems with clicking noises under the hood?
+Why is my car having problems with a skipping reverse gear?
+Why is my car having problems with the engine running but not accelerating?
+Why does my car have squealing noise problems when braking?
+Why is my car having trouble starting with jerking?
+Why is my car having coolant loss problems?
+Why does my car have problems with clicking noise when turning the steering wheel?
+Why does my car have problems with hard downshifting?
+Why is my car having starting problems with clicking noises?
+Why does my car have suspension grinding noise problems?
+Why is my car having power loss issues at high speeds?
+Why does my car have clicking noise problems when cold?
+Why is my car having starting problems with gasoline smells?
+Why does my car have problems with rubbing noise while driving?
+Why does my car have clicking noise problems when accelerating?
+Why does my car have engine overheating problems in the city?
+Why does my car have knocking noise problems when accelerating?
+Why does my car have problems with mirrors going out of adjustment?
+Why does my car have intermittent hot start problems?
+Why does my car have clicking noise problems when driving on uneven roads?
+Why is my car having problems with the door not staying open?
+Why does my car have problems with clicking noises when going over bumps?
+Why does my car have squealing problems when braking in reverse?
+Why does my car have vibration problems when cornering?
+Why is my car having problems with the steering pulling to one side?
+Why does my car have problems with squealing noise when braking suddenly?
+Why does my car have whistling noise problems when accelerating?
+Why does my car have problems with clicking noise when changing gears?
+Why is my car having starting problems with a clicking noise from the engine?
+Why is my car having problems with a fast-draining battery?
