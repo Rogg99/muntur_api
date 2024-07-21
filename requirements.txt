@@ -3,7 +3,7 @@ asgiref==3.7.2
 CacheControl==0.13.1
 cachetools==5.3.1
 certifi==2023.5.7
-cffi==1.15.1
+# cffi==1.15.1
 charset-normalizer==3.1.0
 cryptography==41.0.1
 Django==3.2.15
