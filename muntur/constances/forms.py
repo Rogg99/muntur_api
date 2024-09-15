@@ -108,7 +108,7 @@ class InitGarage(forms.Form):
     nom = forms.CharField(required=True)
     description = forms.CharField(required=True)
     email = forms.CharField(required=True)
-    photo = forms.CharField(required=True)
+    photo = forms.CharField(required=False)
     telephone1 = forms.CharField(required=True)
     telephone2 = forms.CharField(required=False)
     type = forms.CharField(required=True)

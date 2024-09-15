@@ -681,102 +681,59 @@ def createGarage(request):
     if request.method == 'POST':
         token=request.META['HTTP_AUTHORIZATION']
         body={
-            'id':request.POST.get("id",''),
             'nom':request.POST.get("nom",''),
-            'prenom':request.POST.get("prenom",''),
+            'description':request.POST.get("description",''),
             'prenom':request.POST.get("prenom",''),
             'email':request.POST.get("email",''),
-            'sexe':request.POST.get("sexe",''),
-            'date_naissance':request.POST.get("date_naissance",''),
-            'cni':request.POST.get("cni",''),
-            'numero_ce':request.POST.get("numero_ce",''),
-            'telephone':request.POST.get("telephone",''),
-            'parrain':request.POST.get("parrain",''),
-            'commune':request.POST.get("commune",''),
-            'departement_org':request.POST.get("departement_org",''),
-            'departement':request.POST.get("departement",''),
-            'region':request.POST.get("region",''),
+            'telephone1':request.POST.get("telephone1",''),
+            'telephone2':request.POST.get("telephone2",''),
+            'type':request.POST.get("type",''),
+            'longitude':request.POST.get("longitude",''),
+            'latitude':request.POST.get("latitude",''),
+            'ville':request.POST.get("ville",''),
             'pays':request.POST.get("pays",''),
-            'edition':request.POST.get("edition",''),
-            'sympathisant':request.POST.get("sympathisant",''),
             'photo':request.POST.get("photo",''),
         }
         payload = json.dumps(body)
         payload = json.loads(payload)
-        request_file = request.FILES['image'] if 'image' in request.FILES else None
         form = forms.InitGarage(payload)
         if verifyTokenIn(token=token,request=request) and form.is_valid() and request_file:
-            fs = FileSystemStorage()
-            size = 300, 170
-            filename = form.cleaned_data["photo"]
-            newfilename=filename.split('.')[0] + '_' + str(int(datetime.datetime.now().timestamp()))+'.'+filename.split('.')[1]
-            file = fs.save('images/big/'+newfilename, request_file)
-            img = Image.open(settings.MEDIA_ROOT+'/images/big/'+file)
-            img = img.resize(size, Image.Resampling.LANCZOS)
-            img.save(settings.MEDIA_ROOT+'/'+file)
-            fileurl = fs.url(file)
-
-            id = form.cleaned_data["id"]
             nom = form.cleaned_data["nom"]
-            prenom = form.cleaned_data["prenom"]
+            description = form.cleaned_data["description"]
             email = form.cleaned_data["email"]
-            sexe = form.cleaned_data["sexe"]
-            date_naissance = form.cleaned_data["date_naissance"]
-            cni = form.cleaned_data["cni"]
-            numero_ce = form.cleaned_data["numero_ce"]
-            telephone = form.cleaned_data["telephone"]
-            parrain = form.cleaned_data["parrain"]
-            commune = form.cleaned_data["commune"]
-            departement_org = form.cleaned_data["departement_org"]
-            departement = form.cleaned_data["departement"]
-            region = form.cleaned_data["region"]
-            edition = form.cleaned_data["edition"]
+            photo = form.cleaned_data["photo"]
+            telephone1 = form.cleaned_data["telephone1"]
+            telephone2 = form.cleaned_data["telephone2"]
+            type = form.cleaned_data["type"]
+            latitude = form.cleaned_data["latitude"]
+            longitude = form.cleaned_data["longitude"]
+            ville = form.cleaned_data["ville"]
             pays = form.cleaned_data["pays"]
-            sympathisant = form.cleaned_data["sympathisant"]
             try:
                 usr = Garage()
-                usr.id=id
-                if id=='auto' or len(id)<10:
-                    codefin = floor(datetime.datetime.now().timestamp())
-                    usr.id = str(uuid.uuid4()) + ":" + str(codefin)
+                codefin = floor(datetime.datetime.now().timestamp())
+                usr.id = str(uuid.uuid4()) + ":" + str(codefin)
                 usr.nom = nom
-                usr.prenom = prenom
+                usr.description = description
                 usr.email = email
-                usr.numero_ce = numero_ce
-                usr.sexe = sexe
-                usr.date_naissance = date_naissance
-                usr.cni = cni
-                usr.telephone = telephone
-                usr.photo=fileurl
-                usr.parrain = parrain
-                usr.commune = commune
-                usr.edition = edition
-                usr.departement_org = departement_org
-                usr.departement = departement
-                usr.region = region
+                usr.photo = photo
+                usr.telephone1 = telephone1
+                usr.telephone2 = telephone2
+                usr.type = type
+                usr.latitude = latitude
+                usr.longitude=longitude
+                usr.ville = ville
                 usr.pays = pays
-                usr.sympathisant = sympathisant
                 usr.save() 
                 data["error"] = False
                 data["code"] = 0
                 data["data"] = {
                             "id":usr.id,
                             "nom" : usr.nom,
-                            "prenom" : usr.prenom,
+                            "description" : usr.description,
                             "email" : usr.email,
-                            "sexe" : usr.sexe,
-                            "date_naissance" : usr.date_naissance,
-                            "cni" : usr.cni,
-                            "telephone" : usr.telephone,
-                            "parrain" : usr.parrain,
-                            "commune" : usr.commune,
-                            "departement_org" : usr.departement_org,
-                            "departement" : usr.departement,
-                            "region" : usr.region,
-                            "pays" : usr.pays,
-                            "sympathisant" : usr.sympathisant,
+                            "ville" : usr.ville,
                             "creation_date" : usr.creation_date,
-                            "edition" : usr.edition,
                             }
                 status = 200
             except Exception as e :
@@ -821,54 +778,45 @@ def updateGarage(request):
         if verifyTokenIn(token=token,request=request) and form.is_valid():
             id = form.cleaned_data["id"]
             nom = form.cleaned_data["nom"]
-            prenom = form.cleaned_data["prenom"]
+            description = form.cleaned_data["description"]
             email = form.cleaned_data["email"]
-            sexe = form.cleaned_data["sexe"]
-            date_naissance = form.cleaned_data["date_naissance"]
-            cni = form.cleaned_data["cni"]
-            telephone = form.cleaned_data["telephone"]
-            parrain = form.cleaned_data["parrain"]
-            commune = form.cleaned_data["commune"]
-            departement_org = form.cleaned_data["departement_org"]
-            departement = form.cleaned_data["departement"]
-            region = form.cleaned_data["region"]
+            photo = form.cleaned_data["photo"]
+            telephone1 = form.cleaned_data["telephone1"]
+            telephone2 = form.cleaned_data["telephone2"]
+            type = form.cleaned_data["type"]
+            latitude = form.cleaned_data["latitude"]
+            longitude = form.cleaned_data["longitude"]
+            ville = form.cleaned_data["ville"]
             pays = form.cleaned_data["pays"]
-            sympathisant = form.cleaned_data["sympathisant"]
             try:
                 usr = Garage.objects.get(id=id)
                 usr.nom = nom
-                usr.prenom = prenom
+                usr.description = description
                 usr.email = email
-                usr.sexe = sexe
-                usr.date_naissance = date_naissance
-                usr.cni = cni
-                usr.telephone = telephone
-                usr.parrain = parrain
-                usr.commune = commune
-                usr.departement_org = departement_org
-                usr.departement = departement
-                usr.region = region
+                usr.photo = photo
+                usr.telephone1 = telephone1
+                usr.telephone2 = telephone2
+                usr.type = type
+                usr.latitude = latitude
+                usr.longitude=longitude
+                usr.ville = ville
                 usr.pays = pays
-                usr.sympathisant = sympathisant
                 usr.save() 
                 data["error"] = False
                 data["code"] = 0
                 data["data"] = {
                             "id":usr.id,
                             "nom" : usr.nom,
-                            "prenom" : usr.prenom,
+                            "description" : usr.description,
                             "email" : usr.email,
-                            "sexe" : usr.sexe,
-                            "date_naissance" : usr.date_naissance,
-                            "cni" : usr.cni,
-                            "telephone" : usr.telephone,
-                            "parrain" : usr.parrain,
-                            "commune" : usr.commune,
-                            "departement_org" : usr.departement_org,
-                            "departement" : usr.departement,
-                            "region" : usr.region,
+                            "photo" : usr.photo,
+                            "telephone1" : usr.telephone1,
+                            "telephone2" : usr.telephone2,
+                            "type" : usr.type,
+                            "latitude" : usr.latitude,
+                            "longitude" : usr.longitude,
+                            "ville" : usr.ville,
                             "pays" : usr.pays,
-                            "sympathisant" : usr.sympathisant,
                             "creation_date" : usr.creation_date,
                             }
                 status = 200
@@ -1077,9 +1025,9 @@ def deleteGarage(request):
         payload = json.dumps(request.GET.dict())
         payload = json.loads(payload)
         print(payload)
-        form = forms.getInscription(payload)
+        form = forms.getObject(payload)
         if verifyTokenIn(token=token,request=request) and form.is_valid() :
-            Inscription.objects.delete(id=id)
+            Garage.objects.delete(id=id)
             data["error"] = False
             data["code"] = 0
             data["data"] = id + ' deleted successfully'
