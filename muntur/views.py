@@ -690,6 +690,8 @@ def createGarage(request):
             'type':request.POST.get("type",''),
             'longitude':request.POST.get("longitude",''),
             'latitude':request.POST.get("latitude",''),
+            'heure_ouverture':request.POST.get("heure_ouverture",''),
+            'heure_fermeture':request.POST.get("heure_fermeture",''),
             'ville':request.POST.get("ville",''),
             'pays':request.POST.get("pays",''),
             'photo':request.POST.get("photo",''),
@@ -697,7 +699,7 @@ def createGarage(request):
         payload = json.dumps(body)
         payload = json.loads(payload)
         form = forms.InitGarage(payload)
-        if verifyTokenIn(token=token,request=request) and form.is_valid() and request_file:
+        if verifyTokenIn(token=token,request=request) and form.is_valid():
             nom = form.cleaned_data["nom"]
             description = form.cleaned_data["description"]
             email = form.cleaned_data["email"]
@@ -707,6 +709,8 @@ def createGarage(request):
             type = form.cleaned_data["type"]
             latitude = form.cleaned_data["latitude"]
             longitude = form.cleaned_data["longitude"]
+            heure_ouverture = form.cleaned_data["heure_ouverture"]
+            heure_fermeture = form.cleaned_data["heure_fermeture"]
             ville = form.cleaned_data["ville"]
             pays = form.cleaned_data["pays"]
             try:
@@ -722,6 +726,10 @@ def createGarage(request):
                 usr.type = type
                 usr.latitude = latitude
                 usr.longitude=longitude
+                if heure_ouverture:
+                    usr.heure_ouverture = datetime.datetime.strptime(heure_ouverture,'%H:%M') 
+                if heure_fermeture:
+                    usr.heure_fermeture = datetime.datetime.strptime(heure_fermeture,'%H:%M')  
                 usr.ville = ville
                 usr.pays = pays
                 usr.save() 
@@ -788,6 +796,8 @@ def updateGarage(request):
             longitude = form.cleaned_data["longitude"]
             ville = form.cleaned_data["ville"]
             pays = form.cleaned_data["pays"]
+            heure_ouverture = form.cleaned_data["heure_ouverture"]
+            heure_fermeture = form.cleaned_data["heure_fermeture"]
             try:
                 usr = Garage.objects.get(id=id)
                 usr.nom = nom
@@ -799,6 +809,10 @@ def updateGarage(request):
                 usr.type = type
                 usr.latitude = latitude
                 usr.longitude=longitude
+                if heure_ouverture:
+                    usr.heure_ouverture = datetime.datetime.strptime(heure_ouverture,'%H:%M') 
+                if heure_fermeture:
+                    usr.heure_fermeture = datetime.datetime.strptime(heure_fermeture,'%H:%M') 
                 usr.ville = ville
                 usr.pays = pays
                 usr.save() 
@@ -960,7 +974,13 @@ def getGaragesAround(request):
             latitude = form.cleaned_data["latitude"]
             key = form.cleaned_data["key"]
 
-            pres = Garage.objects.all()
+
+            if key == '*' or key == '':
+                pres = Garage.objects.all()
+                
+            else :
+                pres = Garage.objects.filter(description__contains = key) | Garage.objects.filter(nom__contains = key)
+            
             result=[]
             userPosition = Point()
             userPosition.lat=latitude
@@ -987,6 +1007,9 @@ def getGaragesAround(request):
                                 "type" : garage.type,
                                 "creation_date" : garage.creation_date,
                                 }) 
+                if len(result)>=50:
+                    break
+                
             result = sorted(result, key=lambda x: x['distance'])
 
             data["error"] = False

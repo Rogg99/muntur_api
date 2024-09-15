@@ -60,7 +60,7 @@ class Garage(models.Model):
     id = models.CharField(primary_key=True,unique=True,max_length=100)
     nom = models.CharField(max_length=100,null=False)
     description = models.CharField(max_length=100,default='')
-    email = models.CharField(max_length=100,unique=True,null=False)
+    email = models.CharField(max_length=100,unique=False,null=True)
     telephone1 = models.CharField(max_length = 200,null=False)
     telephone2 = models.CharField(max_length = 200)
     photo = models.CharField(max_length = 200)
@@ -68,6 +68,8 @@ class Garage(models.Model):
     pays = models.CharField(max_length = 200,default='CAMEROUN')
     longitude = models.FloatField(null=False)
     latitude = models.FloatField(null=False)
+    heure_ouverture = models.TimeField(null=True)
+    heure_fermeture = models.TimeField(null=True)
     type = models.CharField(max_length=200,default='garage') # garage, parking, centre de visite,...
     now=floor(datetime.datetime.now().timestamp())
     creation_date = models.IntegerField(default=now)
